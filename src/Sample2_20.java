@@ -15,12 +15,12 @@ public class Sample2_20 {
             test[i] =Integer.parseInt(str);
         }
 
-        for (int s=0;s<test.length-1;s++){
-            for (int t=s+1;t<test.length;t++){
-                if(test[t]>test[s]){
-                    int temp =test[t];
-                    test[t] =test[s];
-                    test[s] =temp;
+        for(int i=1;i< test.length;i++){
+            for(int j=0;j< test.length-i;j++){
+                if(test[j]<test[j+1]){
+                    int temp = test[j];
+                    test[j] = test[j+1];
+                    test[j+1] =temp;
                 }
             }
         }
